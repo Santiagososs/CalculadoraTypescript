@@ -1,0 +1,11 @@
+.btn-soma{
+border: none;
+background-color: #1E90FF;
+width: 14vh;
+height: 6vh;
+border-radius: 8px 20px;
+font-size: 2.2rem;
+color: #F8F8FF;
+cursor: pointer;
+}
+

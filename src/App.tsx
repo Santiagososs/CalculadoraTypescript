@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Input from './components/input/Input';
+import './App.css'
+import Title from './components/title/Title';
+import Button from './components/button/Button';
 
 function App() {
+
+  function SomaInput(){
+    var s1 = document.getElementById("input1") as HTMLInputElement
+    var s2 = document.getElementById("input2") as HTMLInputElement
+    var resu = parseInt(s1.value) + parseInt(s2.value);
+    var resultado = resu.toString()
+    var finalresu =  document.getElementById("idp") as HTMLParagraphElement
+    finalresu.innerHTML = resultado
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        
+      <div className="container-comps">
+         
+      <Title text="<Titulo de sua escolha>"/>
+
+      <div className="input-div">
+      <Input id="input1"/>
+      <Input id="input2"/>
+      </div>
+    
+      <Button click={SomaInput}/>
+      <p id="idp"></p>
+      </div>
     </div>
   );
 }
