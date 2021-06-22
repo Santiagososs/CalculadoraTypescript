@@ -3,7 +3,7 @@ import './Title.css';
 
 
 interface TitleProps {
-    text: string;
+    text?: string;
     number?: Function 
 }
 

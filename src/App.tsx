@@ -4,8 +4,10 @@ import './App.css'
 import Title from './components/title/Title';
 import Button from './components/button/Button';
 
+
 function App() {
 
+  
   function SomaInput(){
     var s1 = document.getElementById("input1") as HTMLInputElement
     var s2 = document.getElementById("input2") as HTMLInputElement
@@ -20,7 +22,7 @@ function App() {
         
       <div className="container-comps">
          
-      <Title text="<Titulo de sua escolha>"/>
+      <Title text={process.env.REACT_APP_TITLE_ENV}/>
 
       <div className="input-div">
       <Input id="input1"/>
